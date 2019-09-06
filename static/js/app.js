@@ -14,12 +14,12 @@ function buildCharts(sample) {
   // PIE CHART
   d3.json(`/samples/${sample}`).then(function(data) {
     var pieValues = data.sample_values.slice(0,10);
-    var pielabel = data.otu_ids.slice(0, 10);
+    var pieLabel = data.otu_ids.slice(0, 10);
     var pieHover = data.otu_labels.slice(0, 10);
 
     var data = [{
       values: pieValues,
-      labels: pielabel,
+      labels: pieLabel,
       hovertext: pieHover,
       type: 'pie'
     }];
